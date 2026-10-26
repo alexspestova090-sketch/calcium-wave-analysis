@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "clang++",
+      "args": [
+        "-std=c++17",
+        "-g",
+        "-Wall",
+        "-Wextra",
+
+        "-I/opt/homebrew/opt/opencv/include/opencv5",
+        "-L/opt/homebrew/opt/opencv/lib",
+
+        "${workspaceFolder}/src/main.cpp",
+
+        "-lopencv_videoio",
+        "-lopencv_imgproc",
+        "-lopencv_core",
+
+        "-o",
+        "${workspaceFolder}/build/main"
+      ],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
