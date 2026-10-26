@@ -1,0 +1,6 @@
+build/
+*.mp4
+.DS_Store
+__pycache__/
+.venv/
+*.png
